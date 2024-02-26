@@ -7,20 +7,21 @@
     import * as Card from "$lib/components/ui/card";
     import * as HoverCard from "$lib/components/ui/hover-card";
     import * as Table from "$lib/components/ui/table";
-    import { toggleMode } from "mode-watcher";
+    // import { toggleMode } from "mode-watcher";
+    import { AspectRatio } from "$lib/components/ui/aspect-ratio";
   </script>
   
-  <header class="py-5 container">
-    <div id="header-inner" class="flex flex-col sm:flex-row gap-8 justify-between items-center mx-auto">
+  <header class="py-5 container z-10 max-w-[1100px]">
+    <div id="header-inner" class="flex flex-col sm:flex-row gap-8 justify-between items-center ml-auto">
       <div id="site-title" class="text-center sm:text-left">
         <a href="/" class="flex flex-row items-center gap-4 justify-center sm:justify-start">
           <img class="max-w-14 inline-block" src="/RichardsLodge1116Logo.webp" alt="Richards Lodge 1116 Logo">
           <div >Richards Lodge 1116</div>
         </a>
       </div>
-      <div class="text-sm sm:text-base text-center">April 6, 2024 at Yankee's Tavern in Carlos, Texas</div>
-      <div id="main-nav" class="flex flex-col sm:flex-row items-center justify-end gap-4">
-        <!-- <Button>Register</Button>  -->
+      <!-- <div class="text-sm sm:text-base text-center">April 6, 2024 at Yankee's Tavern in Carlos, Texas</div> -->
+      <!-- <div id="main-nav" class="z-10 flex flex-col sm:flex-row items-center justify-end gap-4">
+        <Button>Register</Button>
         <div id="theme-toggle">
           <Button on:click={toggleMode} variant="outline" size="icon">
             <Sun class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -28,103 +29,68 @@
             <span class="sr-only">Toggle theme</span>
           </Button>
         </div>
-      </div>
+      </div> -->
     </div>
   </header>
   
-  <section class="my-20">
-    <div class="container">
-      <div class="flex flex-col lg:flex-row mg:items-center mx-auto lg:gap-20 gap-5">
-        <div class="lg:max-w-[50%] mx-auto text-left">
-          <h2 class="lg:text-xl my-2 tracking-wider">
-            <span class="uppercase text-primary-foreground bg-primary px-4 py-2 rounded-md font-semibold leading-loose">16th Annual Richards Lodge 1116</span><br>
-            <span class="text-6xl md:text-8xl leading-none font-bold">Car Show <br><span class="text-ring">&</span> Fundraiser</span>
+  <section class="my-5">
+    <div class="container max-w-[1200px]">
+      <div class="flex flex-row ml-auto lg:gap-20 gap-5">
+        <div class="md:max-w-[60%] z-10 text-left">
+          <h2 class="lg:text-xl my-2 tracking-wider text-nowrap">
+            <span class="uppercase bg-primary px-4 py-2 rounded-md font-semibold leading-10">16th Annual Richards Lodge 1116</span><br>
+            <span class="text-6xl md:text-8xl leading-tight font-bold">Car Show <br><span class="text-ring">&</span> Fundraiser</span>
           </h2>
-          <p class="lg:text-xl lg:my-3">Join us at Yankee's Tavern in Carlos, Texas on April 6, 2024. Proceeds from this event go to support the local charities and communities in need that Richards Lodge is actively involved with.</p>
+          <p class="lg:text-xl lg:my-3 max-w-[90%] leading-relaxed">Join us at Yankee's Tavern in Carlos, Texas on April 6, 2024. Proceeds from this event go to support the local charities and communities in need that Richards Lodge is actively involved with.</p>
         </div>
-        <div class="bg-[url('/CarShowGeneGallin.jpg')] bg-cover w-full lg:w-1/2 h-48 lg:h-96 bg-no-repeat bg-center">
-          <!-- Image section remains the same -->
+        <div class="">
+          <!-- <div class="absolute top-60 -right-4 w-96 h-72 bg-yellow-400 rounded-full filter blur-2xl mix-blend-screen "></div> -->
+          <div class="absolute top-0 -right-30 w-[50%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-40 mix-blend-screen"></div>
+          <img src="/carshow-hero.webp" alt="car show" class="z-5 hidden lg:block absolute lg:w-[600px] md:w-[33%] md:top-20 lg:top-12 right-0 drop-shadow-2xl">
         </div>
       </div>
     </div>
   </section>
   
-  <section class="my-24 container">
-    <div class="max-w-[1000px] mx-auto">
-      <p class="text-2xl lg:text-5xl text-center">Food • Music • Door Prizes</p>
-      <p class="text-lg lg:text-4xl text-center mt-5 capitalize">Open to the public • Doors open at 8:00 AM</p>
-      <p class="text-lg lg:text-4xl text-center mt-3 capitalize">Awards presentation is at 2:00 PM</p>
-      <p class="lg:text-xl text-center my-5 max-w-[600px] mx-auto">
-        25 awards for cars, trucks, jeeps, and bikes ⭐️ Children's pick ⭐️ Lodge Master pick ⭐️ Yankee Mike's pick ⭐️ Rat rod pick
-      </p>
+  <section class="lg:mt-60 mt-10 container">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="relative">
+        <div class="absolute top-0 -left-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
+      </div>
+      <p class="text-[5vw] text-nowrap font-bold lg:text-6xl "><span class="bg-primary px-3 rounded-md">Food</span> • <span class="bg-primary px-3 rounded-md">Music</span> • <span class="bg-primary px-3 rounded-md">Door Prizes</span></p>
+      <ul class="text-lg lg:text-4xl lg:mt-10 mt-5 capitalize">
+        <li class="mb-4">⭐️ Open to the public</li>
+        <li class="mb-4">⭐️ Doors Open at 8:00 AM</li>
+        <li class="mb-4">⭐️ Registration is open from 8:00 AM to 12:00 PM</li>
+        <li class="mb-4">⭐️ Awards presentation is at 2:00 PM</li>
+        <li class="mb-4">⭐️ 25 awards for cars, trucks, jeeps, and bikes</li>
+      </ul>
     </div>
   </section>
+
+  <section class="my-20 container max-w-[1100px]">
+  <AspectRatio ratio={21 / 9} class="bg-muted">
+    <img
+      src="/RedSilver.jpg"
+      alt="Gray by Drew Beamer"
+      class="h-full w-full rounded-md object-cover"
+    />
+  </AspectRatio>
+</section>
+
   
-  <section class="mt-28 mb-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl lg:text-4xl font-semibold text-center text-accent-foreground">Our Sponsors</h2>
-      <div class="border-b-2 border-primary pt-4 mb-10 w-10 items-center mx-auto"></div>
-      <div class="grid grid-cols-2 sm:grid-cols-5 gap-8 justify-center items-center">
-        <!-- Sponsor Logos -->
-        <!-- Repeat the structure below for each sponsor logo -->
-        <div class="flex justify-center">
-          <HoverCard.Root>
-            <HoverCard.Trigger><img src="/logos/exlogo1.webp" alt="Sponsor 1" class="h-auto max-h-16"></HoverCard.Trigger>
-            <HoverCard.Content>
-              These are details about the sponsor. We love our sponsors.
-            </HoverCard.Content>
-          </HoverCard.Root>
-        </div>
-        <!-- Sponsor Logo 2 -->
-        <div class="flex justify-center">
-        <HoverCard.Root>
-          <HoverCard.Trigger><img src="/logos/exlogo2webp.webp" alt="Sponsor 2" class="h-auto max-h-16"></HoverCard.Trigger>
-          <HoverCard.Content>
-            These are details about the sponsor. We love our sponsors.
-          </HoverCard.Content>
-        </HoverCard.Root>
-      </div>
-      <!-- Sponsor Logo 3 -->
-      <div class="flex justify-center">
-        <HoverCard.Root>
-          <HoverCard.Trigger> <img src="/logos/exlogo3.webp" alt="Sponsor 3" class="h-auto max-h-16"></HoverCard.Trigger>
-          <HoverCard.Content>
-            These are details about the sponsor. We love our sponsors.
-          </HoverCard.Content>
-        </HoverCard.Root>
-      </div>
-      <!-- Sponsor Logo 4 -->
-      <div class="flex justify-center">
-        <HoverCard.Root>
-          <HoverCard.Trigger> <img src="/logos/exlogo4.webp" alt="Sponsor 4" class="h-auto max-h-16"></HoverCard.Trigger>
-          <HoverCard.Content>
-            These are details about the sponsor. We love our sponsors.
-          </HoverCard.Content>
-        </HoverCard.Root>
-      </div>
-      <!-- Sponsor Logo 5 -->
-      <div class="flex justify-center">
-        <HoverCard.Root>
-          <HoverCard.Trigger> <img src="/logos/exlogo5.webp" alt="Sponsor 4" class="h-auto max-h-16"></HoverCard.Trigger>
-          <HoverCard.Content>
-            These are details about the sponsor. We love our sponsors.
-          </HoverCard.Content>
-        </HoverCard.Root>
-      </div>
+  <section class="container my-36">
+    <div class="relative">
+      <div class="absolute -top-32 -right-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
     </div>
-      </div>
-    
-  </section>
-  
-  <section class="container mb-28">
-    <div class="max-w-[600px] mx-auto text-center my-10">
-      <h2 class="text-2xl text-center font-semibold my-2">Sponsorship Opportunities</h2>
-      <p>Our sponsors are so important... Lorem ipsum dolor sit amet, qui minim labore adipisicing... This how it works:</p>
+    <div class="mx-auto text-center my-10">
+      <h2 class="lg:text-6xl text-3xl text-center font-semibold my-2">Sponsorship Opportunities</h2>
+      <p class="max-w-[600px] mx-auto mt-8">Our sponsors are so important... Lorem ipsum dolor sit amet, qui minim labore adipisicing... This how it works:</p>
     </div>
     <div class="overflow-x-auto">
       <div class="max-w-[800px] mx-auto">
         <div class="max-w-[500px] mx-auto">
-            <Table.Root>
+            <Table.Root class="text-xl">
               <Table.Caption>For more information, contact: Scott Harman (936) 870-8505, Jan Matchett (936) 870-6187 or Brian Coleman (832) 567-3832.</Table.Caption>
               <Table.Header>
                 <Table.Row>
@@ -162,8 +128,8 @@
   
   <section class="container">
     <div class="max-w-[1000px] flex flex-col lg:flex-row items-center gap-10 mx-auto py-10">
-      <div class="lg:max-w-[50%] md:max-w-[75%]">
-        <img src="/CarShowAlvinMatthews.jpg" alt="sample_photo" class="">
+      <div class="">
+          <img src="/CarShowAlvinMatthews.jpg" alt="sample_photo" class="rounded-md">
       </div>
       <div class="text-left">
         <p class="tracking-wide ml-1">Subheader</p>
@@ -181,7 +147,7 @@
     <div class="max-w-[1000px] items-center mx-auto gap-10">
       <Card.Root class="bg-accent text-center py-10">
         <Card.Header class="max-w-2xl mx-auto">
-          <Card.Title class=" text-2xl capitalize">Get in touch</Card.Title>
+          <Card.Title class=" text-3xl mb-5 capitalize">Get in touch</Card.Title>
           <Card.Description class=" text-lg">For more information, contact: Scott Harman (936) 870-8505, Jan Matchett (936) 870-6187 or Brian Coleman (832) 567-3832.</Card.Description>
         </Card.Header>
       </Card.Root>
