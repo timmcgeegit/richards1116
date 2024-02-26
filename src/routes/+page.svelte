@@ -7,7 +7,7 @@
     import * as Card from "$lib/components/ui/card";
     import * as HoverCard from "$lib/components/ui/hover-card";
     import * as Table from "$lib/components/ui/table";
-    // import { toggleMode } from "mode-watcher";
+    import { toggleMode } from "mode-watcher";
     import { AspectRatio } from "$lib/components/ui/aspect-ratio";
   </script>
   
@@ -19,33 +19,23 @@
           <div >Richards Lodge 1116</div>
         </a>
       </div>
-      <!-- <div class="text-sm sm:text-base text-center">April 6, 2024 at Yankee's Tavern in Carlos, Texas</div> -->
-      <!-- <div id="main-nav" class="z-10 flex flex-col sm:flex-row items-center justify-end gap-4">
-        <Button>Register</Button>
-        <div id="theme-toggle">
-          <Button on:click={toggleMode} variant="outline" size="icon">
-            <Sun class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span class="sr-only">Toggle theme</span>
-          </Button>
-        </div>
-      </div> -->
+      
     </div>
   </header>
   
-  <section class="my-5">
+  <section class="my-10">
     <div class="container max-w-[1200px]">
       <div class="flex flex-row ml-auto lg:gap-20 gap-5">
         <div class="md:max-w-[60%] z-10 text-left">
           <h2 class="lg:text-xl my-2 tracking-wider text-nowrap">
-            <span class="uppercase bg-primary px-4 py-2 rounded-md font-semibold leading-10">16th Annual Richards Lodge 1116</span><br>
+            <span class="uppercase bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold leading-10">16th Annual Richards Lodge 1116</span><br>
             <span class="text-6xl md:text-8xl leading-tight font-bold">Car Show <br><span class="text-ring">&</span> Fundraiser</span>
           </h2>
           <p class="lg:text-xl lg:my-3 max-w-[90%] leading-relaxed">Join us at Yankee's Tavern in Carlos, Texas on April 6, 2024. Proceeds from this event go to support the local charities and communities in need that Richards Lodge is actively involved with.</p>
         </div>
         <div class="">
           <!-- <div class="absolute top-60 -right-4 w-96 h-72 bg-yellow-400 rounded-full filter blur-2xl mix-blend-screen "></div> -->
-          <div class="absolute top-0 -right-30 w-[50%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-40 mix-blend-screen"></div>
+          <div class="absolute hidden dark:block top-10 -right-30 w-[50%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-30 mix-blend-screen"></div>
           <img src="/carshow-hero.webp" alt="car show" class="z-5 hidden lg:block absolute lg:w-[600px] md:w-[33%] md:top-20 lg:top-12 right-0 drop-shadow-2xl">
         </div>
       </div>
@@ -55,9 +45,9 @@
   <section class="lg:mt-60 mt-10 container">
     <div class="max-w-[1200px] mx-auto">
       <div class="relative">
-        <div class="absolute top-0 -left-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
+        <div class="absolute hidden dark:block top-0 -left-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
       </div>
-      <p class="text-[5vw] text-nowrap font-bold lg:text-6xl "><span class="bg-primary px-3 rounded-md">Food</span> • <span class="bg-primary px-3 rounded-md">Music</span> • <span class="bg-primary px-3 rounded-md">Door Prizes</span></p>
+      <p class="text-[5vw] text-nowrap font-bold lg:text-6xl "><span class="bg-primary text-primary-foreground px-3 rounded-md">Food</span> • <span class="bg-primary text-primary-foreground px-3 rounded-md">Music</span> <span class="text-accent-foreground">•</span> <span class="bg-primary px-3 text-primary-foreground rounded-md">Door Prizes</span></p>
       <ul class="text-lg lg:text-4xl lg:mt-10 mt-5 capitalize">
         <li class="mb-4">⭐️ Open to the public</li>
         <li class="mb-4">⭐️ Doors Open at 8:00 AM</li>
@@ -81,9 +71,9 @@
   
   <section class="container my-36">
     <div class="relative">
-      <div class="absolute -top-32 -right-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
+      <div class="absolute hidden dark:block z-0 -top-32 -right-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
     </div>
-    <div class="mx-auto text-center my-10">
+    <div class="mx-auto z-1 text-center my-10">
       <h2 class="lg:text-6xl text-3xl text-center font-semibold my-2">Sponsorship Opportunities</h2>
       <p class="max-w-[600px] mx-auto mt-8">Our sponsors are so important... Lorem ipsum dolor sit amet, qui minim labore adipisicing... This how it works:</p>
     </div>
@@ -153,3 +143,13 @@
       </Card.Root>
     </div>
   </section>  
+
+  <div class="fixed bottom-0 right-0 ml-auto">
+    <div id="theme-toggle">
+      <Button on:click={toggleMode} variant="outline" size="icon">
+        <Sun class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <Moon class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <span class="sr-only">Toggle theme</span>
+      </Button>
+    </div>
+  </div>
