@@ -18,9 +18,9 @@
           <div >Richards Lodge 1116</div>
         </a>
       </div>
-      <!-- <div class="text-sm sm:text-base text-center">April 6, 2024 at Yankee's Tavern in Carlos, Texas</div>
+      <div class="text-sm sm:text-base text-center">April 6, 2024 at Yankee's Tavern in Carlos, Texas</div>
       <div id="main-nav" class="flex flex-col sm:flex-row items-center justify-end gap-4">
-        <Button>Register</Button> 
+        <!-- <Button>Register</Button>  -->
         <div id="theme-toggle">
           <Button on:click={toggleMode} variant="outline" size="icon">
             <Sun class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -28,7 +28,7 @@
             <span class="sr-only">Toggle theme</span>
           </Button>
         </div>
-      </div> -->
+      </div>
     </div>
   </header>
   
