@@ -28,14 +28,14 @@
       <div class="flex flex-row ml-auto lg:gap-20 gap-5">
         <div class="md:max-w-[60%] z-10 text-left">
           <h2 class="lg:text-xl my-2 tracking-wider text-nowrap">
-            <span class="uppercase bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold leading-10">16th Annual Richards Lodge 1116</span><br>
-            <span class="text-6xl md:text-8xl leading-tight font-bold">Car Show <br><span class="text-ring">&</span> Fundraiser</span>
+            <span class="uppercase text-nowrap bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold leading-10">16th Annual Richards Lodge 1116</span><br>
+            <span class="text-5xl text-nowrap md:text-8xl leading-tight font-bold">Car Show <br><span class="text-ring">&</span> Fundraiser</span>
           </h2>
           <p class="lg:text-xl lg:my-3 max-w-[90%] leading-relaxed">Join us at Yankee's Tavern in Carlos, Texas on April 6, 2024. Proceeds from this event go to support the local charities and communities in need that Richards Lodge is actively involved with.</p>
         </div>
         <div class="">
           <!-- <div class="absolute top-60 -right-4 w-96 h-72 bg-yellow-400 rounded-full filter blur-2xl mix-blend-screen "></div> -->
-          <div class="absolute hidden dark:block top-10 -right-30 w-[50%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-30 mix-blend-screen"></div>
+          <div class="absolute hidden flex overflow-x-hidden overflow-hidden dark:block top-10 -right-30 w-[50%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-30 mix-blend-screen"></div>
           <img src="/carshow-hero.webp" alt="car show" class="z-5 hidden lg:block absolute lg:w-[600px] md:w-[33%] md:top-20 lg:top-12 right-0 drop-shadow-2xl">
         </div>
       </div>
@@ -45,7 +45,7 @@
   <section class="lg:mt-60 mt-10 container">
     <div class="max-w-[1200px] mx-auto">
       <div class="relative">
-        <div class="absolute hidden dark:block top-0 -left-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
+        <div class="absolute hidden overflow-hidden dark:block top-0 -left-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
       </div>
       <p class="text-[5vw] text-nowrap font-bold lg:text-6xl "><span class="bg-primary text-primary-foreground px-3 rounded-md">Food</span> • <span class="bg-primary text-primary-foreground px-3 rounded-md">Music</span> <span class="text-accent-foreground">•</span> <span class="bg-primary px-3 text-primary-foreground rounded-md">Door Prizes</span></p>
       <ul class="text-lg lg:text-4xl lg:mt-10 mt-5 capitalize">
