@@ -9,10 +9,12 @@
     import * as Table from "$lib/components/ui/table";
     import { toggleMode } from "mode-watcher";
     import { AspectRatio } from "$lib/components/ui/aspect-ratio";
+    import * as Accordion from "$lib/components/ui/accordion";
+	import TableRow from "$lib/components/ui/table/table-row.svelte";
   </script>
   
-  <header class="py-5 container z-10 max-w-[1100px]">
-    <div id="header-inner" class="flex flex-col sm:flex-row gap-8 justify-between items-center ml-auto">
+  <header class="py-5 container z-10">
+    <div id="header-inner" class="flex flex-col sm:flex-row gap-8 justify-between items-center ml-auto max-w-[1200px]">
       <div id="site-title" class="text-center sm:text-left">
         <a href="/" class="flex flex-row items-center gap-4 justify-center sm:justify-start">
           <img class="max-w-14 inline-block" src="/RichardsLodge1116Logo.webp" alt="Richards Lodge 1116 Logo">
@@ -28,32 +30,33 @@
       <div class="flex flex-row ml-auto lg:gap-20 gap-5">
         <div class="md:max-w-[60%] z-10 text-left">
           <h2 class="lg:text-xl my-2 tracking-wider text-nowrap">
-            <span class="uppercase text-nowrap bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold leading-10">16th Annual Richards Lodge 1116</span><br>
-            <span class="text-5xl text-nowrap md:text-8xl leading-tight font-bold">Car Show <br><span class="text-ring">&</span> Fundraiser</span>
+            <span class="uppercase text-nowrap text-primary px-2 py-2 rounded-md font-bold leading-loose">16th Annual Richards Lodge 1116</span><br>
+             <span class="text-5xl text-nowrap md:text-8xl leading-tight font-bold">Car Show <br><span class="text-ring">&</span> Fundraiser</span>
           </h2>
-          <p class="lg:text-xl lg:my-3 max-w-[90%] leading-relaxed">Join us at Yankee's Tavern in Carlos, Texas on April 6, 2024. Proceeds from this event go to support the local charities and communities in need that Richards Lodge is actively involved with.</p>
+          <p class="lg:text-xl lg:my-3 leading-relaxed">Join us at Yankee's Tavern in Carlos, Texas on April 6, 2024 (Rain Date April 13, 2024). Proceeds from this event go to support scholarships for local seniors, local charities, Richards Lodge, and communities that Richards Lodge is actively involved with.</p>
         </div>
         <div class="">
           <!-- <div class="absolute top-60 -right-4 w-96 h-72 bg-yellow-400 rounded-full filter blur-2xl mix-blend-screen "></div> -->
-          <div class="absolute hidden flex overflow-x-hidden overflow-hidden dark:block top-10 -right-30 w-[50%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-30 mix-blend-screen"></div>
-          <img src="/carshow-hero.webp" alt="car show" class="z-5 hidden lg:block absolute lg:w-[600px] md:w-[33%] md:top-20 lg:top-12 right-0 drop-shadow-2xl">
+          <div class="absolute hidden flex overflow-hidden dark:block top-10 right-0 w-[50%] h-[1000px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
+          <img src="/CarShowGeneGallin.jpg" alt="Picture of red car at a car show" class="rounded"> 
+          
         </div>
       </div>
     </div>
   </section>
   
-  <section class="lg:mt-60 mt-10 container">
+  <section class="lg:my-32 mt-10 container">
     <div class="max-w-[1200px] mx-auto">
       <div class="relative">
         <div class="absolute hidden overflow-hidden dark:block top-0 -left-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
       </div>
       <p class="text-[5vw] text-nowrap font-bold lg:text-6xl "><span class="bg-primary text-primary-foreground px-3 rounded-md">Food</span> • <span class="bg-primary text-primary-foreground px-3 rounded-md">Music</span> <span class="text-accent-foreground">•</span> <span class="bg-primary px-3 text-primary-foreground rounded-md">Door Prizes</span></p>
       <ul class="text-lg lg:text-4xl lg:mt-10 mt-5 capitalize">
-        <li class="mb-4">⭐️ Open to the public</li>
-        <li class="mb-4">⭐️ Doors Open at 8:00 AM</li>
-        <li class="mb-4">⭐️ Registration is open from 8:00 AM to 12:00 PM</li>
-        <li class="mb-4">⭐️ Awards presentation is at 2:00 PM</li>
-        <li class="mb-4">⭐️ 25 awards for cars, trucks, jeeps, and bikes</li>
+        <li class="lg:mb-4">⭐️ Open to the public</li>
+        <li class="lg:mb-4">⭐️ Doors Open at 8:00 AM</li>
+        <li class="lg:mb-4">⭐️ Registration is open from 8:00 AM to 12:00 PM</li>
+        <li class="lg:mb-4">⭐️ Awards presentation is at 2:00 PM</li>
+        <li class="lg:mb-4">⭐️ 25 awards for cars, trucks, jeeps, and bikes</li>
       </ul>
     </div>
   </section>
@@ -68,77 +71,121 @@
   </AspectRatio>
 </section>
 
-  
-  <section class="container my-36">
-    <div class="relative">
-      <div class="absolute hidden dark:block z-0 -top-32 -right-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
-    </div>
-    <div class="mx-auto z-1 text-center my-10">
-      <h2 class="lg:text-6xl text-3xl text-center font-semibold my-2">Sponsorship Opportunities</h2>
-      <p class="max-w-[600px] mx-auto mt-8">Our sponsors are so important... Lorem ipsum dolor sit amet, qui minim labore adipisicing... This how it works:</p>
-    </div>
-    <div class="overflow-x-auto">
-      <div class="max-w-[800px] mx-auto">
-        <div class="max-w-[500px] mx-auto">
-            <Table.Root class="text-xl">
-              <Table.Caption>For more information, contact: Scott Harman (936) 870-8505, Jan Matchett (936) 870-6187 or Brian Coleman (832) 567-3832.</Table.Caption>
-              <Table.Header>
-                <Table.Row>
-                  <Table.Head class="w-[200px]">Level</Table.Head>
-                  <Table.Head class="text-right">Amount</Table.Head>
-                </Table.Row>
-              </Table.Header>
-              <Table.Body>
-                <Table.Row>
-                  <Table.Cell class="font-medium">Title Sponsor</Table.Cell>
-                  <Table.Cell class="text-right">$10,000</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell class="font-medium">Platinum Sponsor</Table.Cell>
-                  <Table.Cell class="text-right">$5,000</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell class="font-medium">Gold Sponsor</Table.Cell>
-                  <Table.Cell class="text-right">$2,500</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell class="font-medium">Silver Sponsor</Table.Cell>
-                  <Table.Cell class="text-right">$1,000</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell class="font-medium">Trophy Sponsor</Table.Cell>
-                  <Table.Cell class="text-right">$100</Table.Cell>
-                </Table.Row>
-              </Table.Body>
-            </Table.Root>
-          </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="container">
-    <div class="max-w-[1000px] flex flex-col lg:flex-row items-center gap-10 mx-auto py-10">
+
+
+<section class="container my-36">
+  <div class="relative">
+    <div class="absolute hidden dark:block z-0 -top-32 -right-60 w-[80%] h-[700px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
+  </div>
+  <div class="mx-auto z-1 text-center my-10">
+    <h2 class="lg:text-6xl text-3xl text-center font-semibold my-2">Sponsorship Opportunities</h2>
+    <p class="max-w-2xl text-lg mx-auto mt-8">
+      Our sponsors are so important. Thank you for your continued investment in the community in which we all live and work. Click each sponsorship level to learn more: 
+    </p>
+  </div>
+  <div class="overflow-x-auto">
+    <div class="max-w-[800px] mx-auto">
       <div class="">
-          <img src="/CarShowAlvinMatthews.jpg" alt="sample_photo" class="rounded-md">
-      </div>
-      <div class="text-left">
-        <p class="tracking-wide ml-1">Subheader</p>
-        <h2 class="text-3xl lg:text-4xl font-bold my-1">Another Text Section</h2>
-        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-        <div class="border-l-2 pl-5 my-4">
-          <p>April 6, 2024</p>
-          <p>Rain Date April 13, 2024</p>
-        </div>
+        <Table.Root class="text-xl">
+          <Table.Caption class="max-w-3xl text-lg mx-auto">
+            Make checks payable to "Richards Lodge 1116" and send them to P.O. Box 404 Richards, Texas 77873.
+            For more information, contact: Jan Matchett (936) 870-6187, Brian Coleman (832) 567-3832 or Perry Palmer (281) 468-8118
+          </Table.Caption>
+          <Table.Header>
+          <Table.Row>
+          <Table.Head class="">Level</Table.Head>
+          <Table.Head class="text-right pr-8">Amount</Table.Head>
+          </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            <Table.Row>
+            <Table.Cell colspan="2">
+            <Accordion.Root>
+            <Accordion.Item value="item-1">
+            <Accordion.Trigger class="flex justify-between decoration-transparent items-center w-full text-xl font-medium">
+            <span>Title Sponsor</span>
+            <span class="ml-auto pr-2">$10,000</span>
+            </Accordion.Trigger>
+            <Accordion.Content>
+              Your Title Sponsorship will include banner signage at the car show as well as on the 2024 website and in years to come. 500 free door prize tickets and lunch for you and your guests. Free Car registration for all your entries. Also includes the opportunity to speak to all attendees at the awards presentation.
+            </Accordion.Content>
+            </Accordion.Item>
+            </Accordion.Root>
+            </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell colspan="2">
+              <Accordion.Root>
+              <Accordion.Item value="item-1">
+              <Accordion.Trigger class="flex justify-between decoration-transparent items-center w-full text-xl font-medium">
+              <span>Platinum Sponsor</span>
+              <span class="ml-auto pr-2">$5,000</span>
+              </Accordion.Trigger>
+              <Accordion.Content>
+                Your Platinum Sponsorship will include banner signage at the car show as well as on the 2024 website and in years to come. 200 free door prize tickets and lunch for you and 10 guests. Free Car registration for all your entries. Also includes the opportunity to speak to all attendees at the awards presentation.
+              </Accordion.Content>
+              </Accordion.Item>
+              </Accordion.Root>
+              </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell colspan="2">
+                <Accordion.Root>
+                <Accordion.Item value="item-1">
+                <Accordion.Trigger class="flex justify-between decoration-transparent items-center w-full text-xl font-medium">
+                <span>Gold Sponsor</span>
+                <span class="ml-auto pr-2">$2,500</span>
+                </Accordion.Trigger>
+                <Accordion.Content>
+                  Your Gold Sponsorship will include banner signage at the car show as well as on the 2024 website and in years to come. 100 free door prize tickets and lunch for you and 4 guests. Free Car registration for up to 8 entries.
+                </Accordion.Content>
+                </Accordion.Item>
+                </Accordion.Root>
+                </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell colspan="2">
+                  <Accordion.Root>
+                  <Accordion.Item value="item-1">
+                  <Accordion.Trigger class="flex justify-between decoration-transparent items-center w-full text-xl font-medium">
+                  <span>Silver Sponsor</span>
+                  <span class="ml-auto pr-2">$1,000</span>
+                  </Accordion.Trigger>
+                  <Accordion.Content>
+                    Your Silver Sponsorship will include banner signage at the car show as well as on the 2024 website and in years to come. 50 free door prize tickets and lunch for you and 2 guests. Free Car registration for up to 4 entries.
+                  </Accordion.Content>
+                  </Accordion.Item>
+                  </Accordion.Root>
+                  </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell colspan="2">
+                    <Accordion.Root>
+                    <Accordion.Item value="item-1">
+                    <Accordion.Trigger class="flex justify-between decoration-transparent items-center w-full text-xl font-medium">
+                    <span>Trophy Sponsor</span>
+                    <span class="ml-auto pr-2">$100</span>
+                    </Accordion.Trigger>
+                    <Accordion.Content>
+                      Your Trophy Sponsorship will include banner signage at the car show as well as on the 2024 website and in years to come.
+                    </Accordion.Content>
+                    </Accordion.Item>
+                    </Accordion.Root>
+                    </Table.Cell>
+                    </Table.Row>
+          </Table.Body>
+          </Table.Root>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   
   <section class="container my-20">
     <div class="max-w-[1000px] items-center mx-auto gap-10">
       <Card.Root class="bg-accent text-center py-10">
         <Card.Header class="max-w-2xl mx-auto">
           <Card.Title class=" text-3xl mb-5 capitalize">Get in touch</Card.Title>
-          <Card.Description class=" text-lg">For more information, contact: Scott Harman (936) 870-8505, Jan Matchett (936) 870-6187 or Brian Coleman (832) 567-3832.</Card.Description>
+          <Card.Description class=" text-lg">For more information, contact: Jan Matchett (936) 870-6187, Brian Coleman (832) 567-3832 or Perry Palmer (281) 468-8118 </Card.Description>
         </Card.Header>
       </Card.Root>
     </div>
