@@ -35,7 +35,7 @@
           </h2>
           <p class="lg:text-xl lg:my-3 leading-relaxed">Join us at Yankee's Tavern in Carlos, Texas on April 6, 2024 (Rain Date April 13, 2024). Proceeds from this event go to support scholarships for local seniors, local charities, Richards Lodge, and communities that Richards Lodge is actively involved with.</p>
         </div>
-        <div class="">
+        <div class="hidden lg:block">
           <!-- <div class="absolute top-60 -right-4 w-96 h-72 bg-yellow-400 rounded-full filter blur-2xl mix-blend-screen "></div> -->
           <div class="absolute hidden flex overflow-hidden dark:block top-10 right-0 w-[50%] h-[1000px] bg-primary rounded-full filter blur-3xl opacity-10 mix-blend-screen"></div>
           <img src="/CarShowGeneGallin.jpg" alt="Picture of red car at a car show" class="rounded"> 
